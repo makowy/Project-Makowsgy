@@ -4,3 +4,7 @@ body {
   background-color: #000;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.nav {
+  background-color: #f00;
+}
