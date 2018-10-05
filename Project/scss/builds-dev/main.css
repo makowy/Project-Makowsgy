@@ -1,12 +1,207 @@
-body {
+@font-face {
+  font-family: merrieweather;
+  src: url(fonts/Merrieweather-Regular.ttf);
+}
+.footericon ul {
   position: absolute;
-  color: #f00;
-  background-color: #0f0;
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  left: 85vh;
+}
+.footericon ul li {
+  list-style: none;
+}
+.footericon ul li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+.footericon ul li a span {
+  position: absolute;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.footericon ul li a span:nth-child(1), .footericon ul li a span:nth-child(3) {
+  width: 100%;
+  height: 1px;
+  background: #333;
+}
+.footericon ul li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+.footericon ul li a:hover span:nth-child(1) {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.footericon ul li a span:nth-child(1), .footericon ul li a span:nth-child(3) {
+  width: 100%;
+  height: 1px;
+  color: red;
+}
+.footericon ul li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.footericon ul li a:hover span:nth-child(3) {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.footericon ul li a span:nth-child(2), .footericon ul li a span:nth-child(4) {
+  width: 1px;
+  height: 100%;
+  background: #333;
+}
+.footericon ul li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+.footericon ul li a:hover span:nth-child(2) {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.footericon ul li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+.footericon ul li a:hover span:nth-child(4) {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.nav {
+body {
+  background-color: #0000;
+  margin: 0;
+  font-family: "merrieweather", "Arial Narrow", Arial, sans-serif;
+}
+body header .navLogo {
+  position: absolute;
+  z-index: 12;
+  display: inline;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  top: -200px;
+  left: -100px;
+}
+body header .navPanel {
+  list-style-type: none;
+  margin: 0 70px;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+body header .navPanel li {
+  right: 0;
+  padding-right: 20px;
+  float: left;
+}
+body header .navPanel li a {
+  display: block;
+  font-weight: 700;
+  color: #FFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+body header .navPanel li a:hover:not(.active) {
+  background-color: #111;
+}
+body header .active {
+  background-color: #4CAF50;
+}
+body header .fota {
+  margin: 0 auto;
+}
+body header .fota .background {
   width: 100%;
-  height: 100px;
-  background-color: #000;
+  height: 100vh;
+}
+body header .fota .arrow {
+  top: 90vh;
+  position: absolute;
+  left: 45vw;
+  width: 40px;
+  height: 40px;
+}
+
+.defaultNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.defaultNav-Flap {
+  float: left;
+}
+.defaultNav-Flap li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.defaultNav-Flap li a:hover:not(.active) {
+  background-color: #111;
+}
+.defaultNav-Flap li a .active {
+  background-color: #4CAF50;
+}
+
+.ranking-Table {
+  width: auto;
+}
+.ranking-Table tr {
+  background-color: grey;
+}
+.ranking-Table tr th, .ranking-Table tr td {
+  padding: 7px 10px 10px 10px;
 }
