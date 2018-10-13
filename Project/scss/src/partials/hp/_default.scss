@@ -54,13 +54,26 @@ header {
             height: 100vh;
         }
 
-        .arrow {
+        #arrow {
             top: 90vh;
             position: absolute;
             left:  45vw;
             width: 40px;
             height: 40px;
         }
+    }
+}
+
+#aboutFirm {
+    
+    margin: 50px;
+    height: 100vh;
+
+    &-Container {
+        width: 40%;
+        height: 150px;
+        border: 2px solid $green;
+
     }
 }
 

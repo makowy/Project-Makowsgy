@@ -2,10 +2,27 @@
 <head>
   <link rel="stylesheet" type="text/css" href="scss/builds-dev/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  <script src="jquery-3.2.1.min.js"></script>
+	
+	<script src="jquery.scrollTo.min.js"></script>
+
+  
+  <script>
+      jQuery(function($)
+        {
+          //zresetuj scrolla
+          $.scrollTo(0);
+          
+          $('#aboutFirm').click(function() { $.scrollTo($('#aboutFirm'), 500); });
+        }
+        );
+        </script>
 </head>
 
 <body>
   <header> 
+      
     <div class="navLogo"><img src="zdjecia/weworkit.png"></div>
     <ul class="navPanel">
       <li><a href="inforeg/info.html">Info</a></li>
@@ -16,14 +33,16 @@
     </ul>
     <div class="fota">
       <img class="background" src="zdjecia/logo.jpg"> 
-      <img class="arrow"src="https://image.flaticon.com/icons/svg/32/32195.svg">
+      <a href="#aboutFirm"><img id="arrow"  src="https://image.flaticon.com/icons/svg/32/32195.svg"></a>  
     </div> 
   </header>
 
-  <section>
-  <center>
+  <section id="aboutFirm">
+    <center>
+        <div class="aboutfirm-Container">
 
-  </center>
+        </div>
+    </center>
   </section>
   <footer>
     <div class="footericon">
@@ -49,4 +68,7 @@
       </ul>
     </div>
   </footer>
+
+ 
+  
 </body>
