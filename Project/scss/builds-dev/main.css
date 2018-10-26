@@ -116,57 +116,57 @@ body {
   margin: 0;
   font-family: "merrieweather", "Arial Narrow", Arial, sans-serif;
 }
-body header .navLogo {
+body .fota img {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+body header {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  left: 0;
   position: absolute;
-  z-index: 12;
-  display: inline;
+  text-align: center;
+  bottom: 0vh;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.5s ease 0.1s;
+  -webkit-transition: all 0.5s ease 0.1s;
+}
+body header:hover {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6) !important;
+}
+body header .nav-Contents {
+  display: inline-block;
+  position: relative;
+}
+body header .nav-Contents-List {
+  float: left;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+}
+body header .nav-Contents-List li {
+  list-style-type: none;
+  opacity: 1;
+  transition: all 0.5s ease 0.1s;
+  -webkit-transition: all 0.5s ease 0.1s;
+  float: left;
+  min-width: 120px;
+  max-height: 120px;
+}
+body header .nav-Contents-List li a {
+  height: 120px;
+  line-height: 140px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+body header .nav-Contents-List-logo {
+  height: 140px;
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
-  bottom: -19%;
-  left: 33%;
-}
-body header .navPanel {
-  list-style-type: none;
-  margin: 0 70px;
-  padding: 0;
-  overflow: hidden;
-  background-color: transparent;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-body header .navPanel li {
-  right: 0;
-  padding-right: 20px;
-  float: left;
-}
-body header .navPanel li a {
-  display: block;
-  font-weight: 700;
-  color: #FFF;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-body header .navPanel li a:hover:not(.active) {
-  background-color: #111;
-}
-body header .active {
-  background-color: #4CAF50;
-}
-body header .fota {
-  margin: 0 auto;
-}
-body header .fota .background {
-  width: 100%;
-  height: 100vh;
-}
-body header .fota #arrow {
-  top: 90vh;
-  position: absolute;
-  left: 45vw;
-  width: 40px;
-  height: 40px;
 }
 body #aboutFirm {
   margin: 50px;
