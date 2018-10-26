@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  left: 85vh;
+  left: calc(50vw - 80px);
 }
 .footericon ul li {
   list-style: none;
@@ -112,14 +112,14 @@
 }
 
 body {
-  background-color: #0000;
   margin: 0;
+  background-color: #fff;
   font-family: "merrieweather", "Arial Narrow", Arial, sans-serif;
 }
 body .fota img {
-  margin: 0;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  margin: 0;
 }
 body header {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -162,20 +162,56 @@ body header .nav-Contents-List li a {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
+  transition: color 0.5s ease-in-out;
+}
+body header .nav-Contents-List li a:hover {
+  color: #8e8e8e;
 }
 body header .nav-Contents-List-logo {
   height: 140px;
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
 }
-body #aboutFirm {
+body #aboutfirm {
   margin: 50px;
   height: 100vh;
+  width: 100%;
+  margin-bottom: 1000px;
 }
-body #aboutFirm-Container {
-  width: 40%;
-  height: 150px;
-  border: 2px solid #0f0;
+body .aboutfirm-Container .main {
+  margin: 200px;
+  width: 800px;
+  height: 338px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .aboutfirm-Container .main .left {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: transparent;
+  border-left: 4px solid aqua;
+  border-top: 4px solid aqua;
+}
+body .aboutfirm-Container .main p {
+  position: relative;
+  padding: 80px;
+  top: -100px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+}
+body .aboutfirm-Container .main .right {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: calc(700px - 4px);
+  top: calc(-200px - 4px);
+  background-color: transparent;
+  border-right: 4px solid #333;
+  border-bottom: 4px solid #333;
 }
 
 .defaultNav {

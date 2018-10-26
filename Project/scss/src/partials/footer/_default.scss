@@ -4,7 +4,7 @@
         margin: 0;
         padding: 0;
         display: flex;
-        left: 85vh;
+        left: calc(50vw - 80px);
 
         li {
             list-style: none;
