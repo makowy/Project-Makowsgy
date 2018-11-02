@@ -134,6 +134,10 @@ body .flex-nav header:hover {
 }
 body .flex-nav header a {
   color: black !important;
+  transition: 0.5s color ease-in-out;
+}
+body .flex-nav header a:hover {
+  color: #c6c6c6;
 }
 body header {
   position: absolute;
