@@ -1,7 +1,64 @@
-.yourChoice {
-    &Container {
-        &Main {
+#yourChoice {
+    height: 100vh;
+}
+.yourChoiceContainer {
             
+    &Main {
+        text-align: center;
+
+        .yourChoiceEmployee {
+            display:inline-block;
+
+            
+                img {
+                    margin: 5px 80px;
+                    width: 500px;
+                    height: 500px; 
+                    padding:5px;
+                    border-radius: 5%;
+
+                    &:hover {
+                        z-index:99;
+                        background: black;
+                        opacity: 0.6;
+                    }
+                }
+
+                p {
+                    position: relative;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    color: $darkenwhite;
+                    
+                }
+            }
+            .yourChoice1 {
+                display: inline-block;
+
+                
+
+                img {
+                    margin: 5px 80px;
+                    width: 500px;
+                    height: 500px; 
+                    padding:5px;
+                    border-radius: 5%;
+
+                    &:hover {
+                        z-index:99;
+                        background: black;
+                        opacity: 0.6;
+                    }
+                }
+
+                p {
+                    position: relative;
+                    
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    color: $darkenwhite;
+                    
+                }
+            }
         }
     }
-}

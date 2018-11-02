@@ -137,7 +137,7 @@ body .flex-nav header a {
   transition: 0.5s color ease-in-out;
 }
 body .flex-nav header a:hover {
-  color: #c6c6c6;
+  color: #c6c6c6 !important;
 }
 body header {
   position: absolute;
@@ -272,4 +272,54 @@ body header .navContentsListLogo {
   border-right: 4px solid #333;
   border-bottom: 4px solid #333;
   background-color: transparent;
+}
+
+#yourChoice {
+  height: 100vh;
+}
+
+.yourChoiceContainerMain {
+  text-align: center;
+}
+.yourChoiceContainerMain .yourChoiceEmployee {
+  display: inline-block;
+}
+.yourChoiceContainerMain .yourChoiceEmployee img {
+  margin: 5px 80px;
+  width: 500px;
+  height: 500px;
+  padding: 5px;
+  border-radius: 5%;
+}
+.yourChoiceContainerMain .yourChoiceEmployee img:hover {
+  z-index: 99;
+  background: black;
+  opacity: 0.6;
+}
+.yourChoiceContainerMain .yourChoiceEmployee p {
+  position: relative;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #c6c6c6;
+}
+.yourChoiceContainerMain .yourChoice1 {
+  display: inline-block;
+}
+.yourChoiceContainerMain .yourChoice1 img {
+  margin: 5px 80px;
+  width: 500px;
+  height: 500px;
+  padding: 5px;
+  border-radius: 5%;
+}
+.yourChoiceContainerMain .yourChoice1 img:hover {
+  z-index: 99;
+  background: black;
+  opacity: 0.6;
+}
+.yourChoiceContainerMain .yourChoice1 p {
+  position: relative;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #c6c6c6;
 }

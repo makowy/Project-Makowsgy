@@ -31,7 +31,7 @@ body {
                 transition: .5s color ease-in-out;
 
                 &:hover {
-                    color: $darkenwhite;
+                    color: $darkenwhite !important;
                 }
             }
         }
