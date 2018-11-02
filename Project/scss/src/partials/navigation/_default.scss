@@ -1,29 +1,28 @@
-
 .defaultNav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
     position: fixed;
     top: 0;
+    overflow: hidden;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $darkenwhite;
+    list-style-type: none;
 
-    &-Flap {
+    &Flap {
         float: left;
 
         li {
             a {
                 display: block;
-                color: white;
-                text-align: center;
                 padding: 14px 16px;
+                color: $white;
+                text-align: center;
                 text-decoration: none;
 
                 &:hover:not(.active) {
-                    background-color: #111;
+                    background-color: $black;
                 }
-                
+
                 .active {
                     background-color: #4CAF50;
                 }

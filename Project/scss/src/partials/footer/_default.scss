@@ -1,27 +1,28 @@
 .footericon {
     ul {
         position: absolute;
+        left: calc(50vw - 80px);
+        display: flex;
         margin: 0;
         padding: 0;
-        display: flex;
-        left: calc(50vw - 80px);
 
         li {
             list-style: none;
 
             a {
-                display: block;
                 position: relative;
+                display: block;
+                
                 width: 50px;
                 height: 50px;
-                line-height: 50px;
+                margin: 0 10px;
+                color: $darkgrey;
                 font-size: 20px;
+                line-height: 50px;
                 text-align: center;
                 text-decoration: none;
-                color: #333;
-                margin: 0 10px;
                 transition: .5s;
-            
+
                 span {
                     position: absolute;
                     transition: transform .5s;
@@ -30,48 +31,37 @@
                     &:nth-child(3) {
                         width: 100%;
                         height: 1px;
-                        background: #333;
+                        background: $darkgrey;
                     }
+
+                    //Lepiej nie ruszaj, bo się wyjebie.\/
+
                     &:nth-child(1) {
                         top: 0;
                         left: 0;
                         transform-origin: right;
                     }
-                }
 
-                &:hover span:nth-child(1){
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    transition: transform .5s;
-                }
-
-                span {
                     &:nth-child(1),
                     &:nth-child(3) {
                         width: 100%;
                         height: 1px;
-                        color: red;
+                        color: $red;
                     }
 
-                    &:nth-child(3){
+                    //Tu się kończy.
+                    
+                    &:nth-child(3) {
                         bottom: 0;
                         left: 0;
                         transform-origin: left;
                     }
-                } 
 
-                &:hover span:nth-child(3) {
-                    transform: scaleX(0);
-                    transform-origin: right;
-                    transition: transform .5s;
-                }
-
-                span {
                     &:nth-child(2),
                     &:nth-child(4) {
                         width: 1px;
                         height: 100%;
-                        background: #333;
+                        background: $darkgrey;
                     }
 
                     &:nth-child(2) {
@@ -80,20 +70,34 @@
                         transform: scaleY(0);
                         transform-origin: bottom;
                     }
-                }    
+                }
+
+                &:hover span:nth-child(1) {
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform .5s;
+                }
+
+                &:hover span:nth-child(3) {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform .5s;
+                }
+
                 &:hover span:nth-child(2) {
                     transform: scaleY(1);
                     transform-origin: top;
                     transition: transform .5s;
                 }
-        
+
                 span:nth-child(4) {
                     top: 0;
                     right: 0;
                     transform: scaleY(0);
                     transform-origin: top;
                 }
-                &:hover span:nth-child(4){
+
+                &:hover span:nth-child(4) {
                     transform: scaleY(1);
                     transform-origin: bottom;
                     transition: transform .5s;
