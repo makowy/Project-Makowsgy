@@ -1,64 +1,102 @@
 #yourChoice {
-    height: 100vh;
+   
 }
+
 .yourChoiceContainer {
-            
+    height: 100vh;
+    // background-image: url("../../zdjecia/background2.png");
+
+    h3 {
+        color: $darkenwhite;
+    }
+
     &Main {
+        padding-top: 180px;
         text-align: center;
 
-        .yourChoiceEmployee {
-            display:inline-block;
-
+        .yourChoicePosition {
+            display: inline-block;
             
-                img {
-                    margin: 5px 80px;
-                    width: 500px;
-                    height: 500px; 
-                    padding:5px;
-                    border-radius: 5%;
+           
 
-                    &:hover {
-                        z-index:99;
-                        background: black;
-                        opacity: 0.6;
-                    }
-                }
-
-                p {
-                    position: relative;
-                    font-size: 24px;
-                    text-transform: uppercase;
-                    color: $darkenwhite;
-                    
-                }
+            .left, .right {
+                border: 0;
+                padding: 80px;
+                width: 0;
+                top: -160px;
+                margin:200px;
+                position: aboslute;
+                margin-left: auto;
+                margin-right:auto;
+                background-color: transparent;
+              }
+            .left {
+                top: 200px;
+                left: -2px;
+                padding: 82px;}
+              
+            .animatedBorderTop, 
+            .animatedBorderBottom,
+            .animatedBorderLeft,
+            .animatedBorderRight {
+                position: relative;
             }
-            .yourChoice1 {
-                display: inline-block;
-
-                
-
-                img {
-                    margin: 5px 80px;
-                    width: 500px;
-                    height: 500px; 
-                    padding:5px;
-                    border-radius: 5%;
-
-                    &:hover {
-                        z-index:99;
-                        background: black;
-                        opacity: 0.6;
-                    }
-                }
-
-                p {
-                    position: relative;
-                    
-                    font-size: 24px;
-                    text-transform: uppercase;
-                    color: $darkenwhite;
-                    
-                }
+            .animatedBorderTop::before {
+                content: '';
+                position: absolute;
+                border-bottom: 5px solid $colorLogo;
+                top: 0;
+                left: 0;
+                right: 100%;
+                transition: all 500ms;
             }
-        }
+            .main:hover .animatedBorderTop::before {
+                  right: 0;
+              }
+              
+              
+              
+              .animatedBorderBottom::before {
+                  content: '';
+                  position: absolute;
+                  border-bottom: 5px solid $colorLogo;
+                  bottom: 0;
+                  left: 100%;
+                  right: 0;
+                  transition: all 500ms;
+              }
+              
+              .main:hover .animatedBorderBottom::before {
+                  left: 0px;
+              }
+              
+              .animatedBorderLeft::after {
+                  content: '';
+                  position: absolute;
+                  border-left: 5px solid $colorLogo;
+                  bottom: 0;
+                  right: 0;
+                  top: 100%;
+                  transition: all 500ms;
+              }
+              
+              .main:hover .animatedBorderLeft::after {
+                  top: 0;
+              }
+              
+              .animatedBorderRight::after {
+                  content: '';
+                  position: absolute;
+                  border-left: 5px solid $colorLogo;
+                  bottom: 100%;
+                  left: 0;
+                  top: 0;
+                  transition: all 500ms;
+              }
+
+              .main:hover .animatedBorderRight::after {
+                  bottom: 0;
+              }
+        }    
     }
+}
