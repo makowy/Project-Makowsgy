@@ -1,102 +1,166 @@
 #yourChoice {
-   
+    position: relative;
+    top: 0;
+    width: inherit;
+    height: 100vh;
+    
+    margin-bottom: 100px;
 }
 
 .yourChoiceContainer {
+    position: relative;
+    top: -100vh;
     height: 100vh;
-    // background-image: url("../../zdjecia/background2.png");
 
     h3 {
         color: $darkenwhite;
     }
 
     &Main {
-        padding-top: 180px;
+        
         text-align: center;
 
         .yourChoicePosition {
             display: inline-block;
             
-           
+            .main {
+                top: 100px;
+                height: 500px;
+                margin: 250px 150px;
 
-            .left, .right {
-                border: 0;
-                padding: 80px;
-                width: 0;
-                top: -160px;
-                margin:200px;
-                position: aboslute;
-                margin-left: auto;
-                margin-right:auto;
-                background-color: transparent;
-              }
-            .left {
-                top: 200px;
-                left: -2px;
-                padding: 82px;}
-              
-            .animatedBorderTop, 
-            .animatedBorderBottom,
-            .animatedBorderLeft,
-            .animatedBorderRight {
-                position: relative;
-            }
-            .animatedBorderTop::before {
-                content: '';
-                position: absolute;
-                border-bottom: 5px solid $colorLogo;
-                top: 0;
-                left: 0;
-                right: 80%;
-                transition: all 500ms;
-            }
-            .main:hover .animatedBorderTop::before {
-                  right: 0;
-              }
-              
-              
-              
-              .animatedBorderBottom::before {
-                  content: '';
-                  position: absolute;
-                  border-bottom: 5px solid $colorLogo;
-                  bottom: 0;
-                  left: 80%;
-                  right: 0;
-                  transition: all 500ms;
-              }
-              
-              .main:hover .animatedBorderBottom::before {
-                  left: 0px;
-              }
-              
-              .animatedBorderLeft::after {
-                  content: '';
-                  position: absolute;
-                  border-left: 5px solid $colorLogo;
-                  bottom: 0;
-                  right: 0;
-                  top: 80%;
-                  transition: all 500ms;
-              }
-              
-              .main:hover .animatedBorderLeft::after {
-                  top: 0;
-              }
-              
-              .animatedBorderRight::after {
-                  content: '';
-                  position: absolute;
-                  border-left: 5px solid $colorLogo;
-                  bottom: 80%;
-                  left: 0;
-                  top: 0;
-                  transition: all 500ms;
-              }
+                .left,
+                .right {
+                    position: absolute;
+                    top: -600px;
+                    z-index: 12;
+                    width: 0;
+                    padding: 200px 150px 300px 150px;
+                    border: 0;
+                    background-color: transparent;
+                }
 
-              .main:hover .animatedBorderRight::after {
-                  bottom: 0;
-              }
-        }    
+                .left {
+                    top: 0;
+                }
+
+                .yourChoiceEmployee, .yourChoiceEmployer {
+                    position: relative;
+                    top: -500px;
+                    z-index: 999;
+                    height: 100px;
+                    margin: 5px 5px 0 5px;
+                    transition: background .6s ease-out;
+                    transition-delay: .2s;
+                    transition-duration: .1s;
+
+                    p {
+                        position: relative;
+                        top: 45px;
+                        margin: 0;
+                        color: $colorLogo;
+                        font-weight: 800;
+                        font-size: 24px;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+
+                    .yourChoiceEmployeeDropdown {
+                        position: relative;
+                        bottom: 200px;
+                        padding: 0;
+                        opacity: 0;
+                        list-style: none;
+                        transition: all.6s ease-in-out;
+                        
+                        
+                        li {
+                            position: relative;
+                            margin: 0;
+                            padding: 37px;
+                            color: #48e1ee;
+                            font-weight: 800;
+                            font-size: 18px;
+                            text-align: center;
+                            text-transform: uppercase;     
+                        }
+                        
+                    }
+
+                    &:hover .yourChoiceEmployeeDropdown {
+                        bottom: -50px;
+                        opacity: 1;
+                        
+                    }
+                }
+
+                &:hover .yourChoiceEmployee, &:hover .yourChoiceEmployer {
+                    background: none repeat scroll 0 0 rgba(0, 0, 0, .3);
+                }
+
+                .animatedBorderTop,
+                .animatedBorderBottom,
+                .animatedBorderLeft,
+                .animatedBorderRight {
+                    position: relative;
+                }
+
+                .animatedBorderTop::before {
+                    
+                    position: absolute;
+                    top: 0;
+                    right: 80%;
+                    left: 0;
+                    border-bottom: 5px solid $colorLogo;
+                    content: '';
+                    transition: all 500ms;
+                }
+                &:hover .animatedBorderTop::before {
+                    right: 0;
+                }
+                
+                .animatedBorderBottom::before {
+                    
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 80%;
+                    border-bottom: 5px solid $colorLogo;
+                    content: '';
+                    transition: all 500ms;
+                }
+                
+                &:hover .animatedBorderBottom::before {
+                    left: 0;
+                }
+                
+                .animatedBorderLeft::after {
+                    position: absolute;
+                    top: 88%;
+                    right: 0;
+                    bottom: 0;
+                    border-left: 5px solid $colorLogo;
+                    content: '';
+                    transition: all 500ms;
+                }
+                
+                &:hover .animatedBorderLeft::after {
+                    top: 0;
+                }
+                
+                .animatedBorderRight::after {
+                    position: absolute;
+                    top: 0;
+                    bottom: 88%;
+                    left: 0;
+                    border-left: 5px solid $colorLogo;
+                    content: '';
+                    transition: all 500ms;
+                }
+
+                &:hover .animatedBorderRight::after {
+                    bottom: 0;
+                }
+            }   
+        } 
     }
 }

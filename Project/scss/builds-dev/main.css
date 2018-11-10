@@ -11,9 +11,13 @@ body {
   background-color: #fff;
   font-family: "Montserrat", "Arial Narrow", Arial, sans-serif;
 }
+body .fota {
+  height: 100vh;
+  overflow: hidden;
+}
 body .fota img {
   width: 100%;
-  height: 100vh;
+  height: 1000px;
   margin: 0;
 }
 body .flex-nav header {
@@ -49,6 +53,7 @@ body header .navContents {
 }
 body header .navContentsList {
   float: left;
+  padding: 0;
   font-weight: normal;
   line-height: 1.3;
   text-align: center;
@@ -79,33 +84,6 @@ body header .navContentsListLogo {
   height: 140px;
   -webkit-transform: scale(0.6);
           transform: scale(0.6);
-}
-
-.defaultNav {
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #c6c6c6;
-  list-style-type: none;
-}
-.defaultNavFlap {
-  float: left;
-}
-.defaultNavFlap li a {
-  display: block;
-  padding: 14px 16px;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-}
-.defaultNavFlap li a:hover:not(.active) {
-  background-color: #000;
-}
-.defaultNavFlap li a .active {
-  background-color: #4CAF50;
 }
 
 .weWorkItContainer {
@@ -175,84 +153,140 @@ body header .navContentsListLogo {
   left: calc(700px - 4px);
 }
 
+#yourChoice {
+  position: relative;
+  top: 0;
+  width: inherit;
+  height: 100vh;
+  margin-bottom: 100px;
+}
+
 .yourChoiceContainer {
+  position: relative;
+  top: -100vh;
   height: 100vh;
 }
 .yourChoiceContainer h3 {
   color: #c6c6c6;
 }
 .yourChoiceContainerMain {
-  padding-top: 180px;
   text-align: center;
 }
 .yourChoiceContainerMain .yourChoicePosition {
   display: inline-block;
 }
-.yourChoiceContainerMain .yourChoicePosition .left, .yourChoiceContainerMain .yourChoicePosition .right {
-  border: 0;
-  padding: 80px;
+.yourChoiceContainerMain .yourChoicePosition .main {
+  top: 100px;
+  height: 500px;
+  margin: 250px 150px;
+}
+.yourChoiceContainerMain .yourChoicePosition .main .left,
+.yourChoiceContainerMain .yourChoicePosition .main .right {
+  position: absolute;
+  top: -600px;
+  z-index: 12;
   width: 0;
-  top: -160px;
-  margin: 200px;
-  position: aboslute;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 200px 150px 300px 150px;
+  border: 0;
   background-color: transparent;
 }
-.yourChoiceContainerMain .yourChoicePosition .left {
-  top: 200px;
-  left: -2px;
-  padding: 82px;
+.yourChoiceContainerMain .yourChoicePosition .main .left {
+  top: 0;
 }
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderTop,
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderBottom,
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderLeft,
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderRight {
+.yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer {
+  position: relative;
+  top: -500px;
+  z-index: 999;
+  height: 100px;
+  margin: 5px 5px 0 5px;
+  transition: background 0.6s ease-out;
+  transition-delay: 0.2s;
+  transition-duration: 0.1s;
+}
+.yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee p, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer p {
+  position: relative;
+  top: 45px;
+  margin: 0;
+  color: #48e1ee;
+  font-weight: 800;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee .yourChoiceEmployeeDropdown, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer .yourChoiceEmployeeDropdown {
+  position: relative;
+  bottom: 200px;
+  padding: 0;
+  opacity: 0;
+  list-style: none;
+  transition: all 0.6s ease-in-out;
+}
+.yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee .yourChoiceEmployeeDropdown li, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer .yourChoiceEmployeeDropdown li {
+  position: relative;
+  margin: 0;
+  padding: 37px;
+  color: #48e1ee;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee:hover .yourChoiceEmployeeDropdown, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer:hover .yourChoiceEmployeeDropdown {
+  bottom: -50px;
+  opacity: 1;
+}
+.yourChoiceContainerMain .yourChoicePosition .main:hover .yourChoiceEmployee, .yourChoiceContainerMain .yourChoicePosition .main:hover .yourChoiceEmployer {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+}
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderTop,
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderBottom,
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderLeft,
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderRight {
   position: relative;
 }
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderTop::before {
-  content: "";
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderTop::before {
   position: absolute;
-  border-bottom: 5px solid #48e1ee;
   top: 0;
-  left: 0;
   right: 80%;
+  left: 0;
+  border-bottom: 5px solid #48e1ee;
+  content: "";
   transition: all 500ms;
 }
 .yourChoiceContainerMain .yourChoicePosition .main:hover .animatedBorderTop::before {
   right: 0;
 }
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderBottom::before {
-  content: "";
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderBottom::before {
   position: absolute;
-  border-bottom: 5px solid #48e1ee;
+  right: 0;
   bottom: 0;
   left: 80%;
-  right: 0;
+  border-bottom: 5px solid #48e1ee;
+  content: "";
   transition: all 500ms;
 }
 .yourChoiceContainerMain .yourChoicePosition .main:hover .animatedBorderBottom::before {
-  left: 0px;
+  left: 0;
 }
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderLeft::after {
-  content: "";
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderLeft::after {
   position: absolute;
-  border-left: 5px solid #48e1ee;
-  bottom: 0;
+  top: 88%;
   right: 0;
-  top: 80%;
+  bottom: 0;
+  border-left: 5px solid #48e1ee;
+  content: "";
   transition: all 500ms;
 }
 .yourChoiceContainerMain .yourChoicePosition .main:hover .animatedBorderLeft::after {
   top: 0;
 }
-.yourChoiceContainerMain .yourChoicePosition .animatedBorderRight::after {
-  content: "";
+.yourChoiceContainerMain .yourChoicePosition .main .animatedBorderRight::after {
   position: absolute;
-  border-left: 5px solid #48e1ee;
-  bottom: 80%;
-  left: 0;
   top: 0;
+  bottom: 88%;
+  left: 0;
+  border-left: 5px solid #48e1ee;
+  content: "";
   transition: all 500ms;
 }
 .yourChoiceContainerMain .yourChoicePosition .main:hover .animatedBorderRight::after {
