@@ -23,6 +23,7 @@ body {
         header {
             position: fixed;
             top: 0;
+            z-index: 1000;
             height: 159px;
             background-color: transparent;
             &:hover {

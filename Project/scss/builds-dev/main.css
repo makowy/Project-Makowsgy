@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:500");
 @font-face {
-  font-family: Montserrat;
+  font-family: "Montserrat";
+}
+@font-face {
+  font-family: "Catamaran";
+  @import url("https://fonts.googleapis.com/css?family=Catamaran:500");
 }
 * {
   box-sizing: border-box;
@@ -23,6 +28,7 @@ body .fota img {
 body .flex-nav header {
   position: fixed;
   top: 0;
+  z-index: 1000;
   height: 159px;
   background-color: transparent;
 }
@@ -158,6 +164,7 @@ body header .navContentsListLogo {
   top: 0;
   width: inherit;
   height: 100vh;
+  font-family: "Catamaran";
   margin-bottom: 100px;
 }
 
@@ -177,6 +184,7 @@ body header .navContentsListLogo {
 }
 .yourChoiceContainerMain .yourChoicePosition .main {
   top: 100px;
+  z-index: 100;
   height: 500px;
   margin: 250px 150px;
 }
@@ -215,7 +223,7 @@ body header .navContentsListLogo {
 }
 .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee .yourChoiceEmployeeDropdown, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer .yourChoiceEmployeeDropdown {
   position: relative;
-  bottom: 200px;
+  bottom: 50px;
   padding: 0;
   opacity: 0;
   list-style: none;
@@ -223,6 +231,7 @@ body header .navContentsListLogo {
 }
 .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployee .yourChoiceEmployeeDropdown li, .yourChoiceContainerMain .yourChoicePosition .main .yourChoiceEmployer .yourChoiceEmployeeDropdown li {
   position: relative;
+  z-index: -1;
   margin: 0;
   padding: 37px;
   color: #48e1ee;
