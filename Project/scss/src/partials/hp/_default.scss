@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     height: 100%;
     margin: 0;
@@ -20,18 +21,19 @@ body {
     .flex-nav {
         
 
-        header {
+        .header, .hp{
             position: fixed;
             top: 0;
             z-index: 1000;
             height: 159px;
             background-color: transparent;
+
             &:hover {
                 background: none repeat scroll 0 0 rgba(0, 0, 0, .3);
             }
 
             a {
-                color: black !important;
+                color: $black !important;
                 transition: .5s color ease-in-out;
 
                 &:hover {
@@ -41,7 +43,7 @@ body {
         }
     }
 
-    header {
+    .header {
         position: absolute;
         bottom: 0vh;
         left: 0;
